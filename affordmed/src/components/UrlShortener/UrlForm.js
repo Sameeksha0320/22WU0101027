@@ -33,18 +33,18 @@ const UrlForm = () => {
       <Stack spacing={2}>
         {rows.map((r, idx) => (
           <Stack key={idx} spacing={1}>
-            <UrlInput value={r} index={idx} onChange={updateRow}/>
+            <UrlInput value={r} index={idx} onChange={updateRow} />
             <Stack direction="row" spacing={1}>
-              <Button variant="outlined" size="small" onClick={addRow} disabled={rows.length>=5}>Add</Button>
-              <Button variant="text" size="small" onClick={() => removeRow(idx)} disabled={rows.length===1}>Remove</Button>
+              <Button variant="outlined" size="small" onClick={addRow} disabled={rows.length >= 5}>Add</Button>
+              <Button variant="text" size="small" onClick={() => removeRow(idx)} disabled={rows.length === 1}>Remove</Button>
             </Stack>
-            {idx < rows.length-1 && <Divider/>}
+            {idx < rows.length - 1 && <Divider />}
           </Stack>
         ))}
         <Button type="submit" variant="contained">Shorten</Button>
       </Stack>
-      <ResultDisplay results={results} onVisit={onVisit}/>
-      <Typography variant="caption" sx={{ display:'block', mt: 2, color: 'text.secondary' }}>
+      <ResultDisplay results={results} onVisit={onVisit} />
+      <Typography variant="caption" sx={{ display: 'block', mt: 2, color: 'text.secondary' }}>
         Tip: You can add up to 5 URLs at once. Default validity is 30 minutes if left blank.
       </Typography>
     </Box>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "@mui/material";
-import Header from "../../components/common/Header";
+import Header from "../../components/Header";
 import Navigation from "../../components/common/Navigation";
 import UrlList from "../../components/Statistics/UrlList";
 import { useUrlManagement } from "../../hooks/useUrlManagement";
@@ -13,12 +13,13 @@ const StatisticsPage = () => {
   };
   return (
     <>
-      <Header/>
+      <Header />
       <Container maxWidth="lg" sx={{ py: 3 }}>
-        <UrlList items={urls} onVisit={onVisit}/>
+        <UrlList items={urls} onVisit={onVisit} />
       </Container>
-      <Navigation value={1}/>
+      <Navigation value={1} />
     </>
   );
 };
+
 export default StatisticsPage;

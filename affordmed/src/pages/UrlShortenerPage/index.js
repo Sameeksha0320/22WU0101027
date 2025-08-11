@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "@mui/material";
-import Header from "../../components/common/Header";
+import Header from "../../components/Header";
 import Navigation from "../../components/common/Navigation";
 import UrlForm from "../../components/UrlShortener/UrlForm";
 

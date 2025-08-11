@@ -1,9 +1,10 @@
 import React, { createContext, useContext, useMemo, useState, useEffect, useCallback } from "react";
-import { getAllUrls, saveAllUrls } from "../services/storageService";
-import { createShortRecord, normalizeUrl } from "../services/urlService";
+import { getAllUrls, saveAllUrls } from "../serivces/storageService";
+import { createShortRecord, normalizeUrl } from "../serivces/urlService";
 import { isValidUrl, isValidMinutes, isValidShortcode } from "../utils/validation";
 import { randomShortcode } from "../utils/shortcodeGenerator";
 import { addMinutes, isExpired } from "../utils/dateHelpers";
+// Removed incorrect import. Only useUrlManagement is exported from this file.
 
 const UrlContext = createContext();
 
@@ -97,4 +98,4 @@ export const UrlProvider = ({ children }) => {
   return <UrlContext.Provider value={value}>{children}</UrlContext.Provider>;
 };
 
-export const useUrlContext = () => useContext(UrlContext);
+export const useUrlManagement = () => useContext(UrlContext);

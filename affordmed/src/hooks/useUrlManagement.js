@@ -1,2 +1,2 @@
-import { useUrlContext } from "./context/UrlContext";
-export const useUrlManagement = () => useUrlContext();
+import { useUrlManagement as useUrlManagementHook } from "../Context/UrlContext";
+export const useUrlManagement = () => useUrlManagementHook();

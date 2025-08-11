@@ -1,0 +1,2 @@
+const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789"; // no 0/O/I/l
+export const randomShortcode = (len = 6) => Array.from({ length: len }, () => alphabet[Math.floor(Math.random()*alphabet.length)]).join("");
